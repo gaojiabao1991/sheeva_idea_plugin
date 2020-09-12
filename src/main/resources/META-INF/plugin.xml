@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.sheeva.sheeva_idea_plugin</id>
+    <name>sheeva plugin</name>
+
+    <description>添加右键拷贝wsl路径的功能.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.sheeva.copy_wsl_path" class="com.sheeva.CopyWslPath" text="Copy Wsl Path">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="CutCopyPasteGroup"/>
+            <add-to-group group-id="ProjectViewPopupMenu"/>
+            <add-to-group group-id="EditorTabPopupMenu"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu"/>
+        </action>
+    </actions>
+</idea-plugin>
